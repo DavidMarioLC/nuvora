@@ -40,7 +40,7 @@ export default function Navigation() {
   }
   return (
     <header className="header">
-      <a aria-label="Vehtvz home" className="logo" href="#home">
+      <a aria-label="Nuvora home" className="logo" href="#home">
         <svg
           aria-hidden="true"
           fill="none"
@@ -62,7 +62,7 @@ export default function Navigation() {
             strokeWidth="3"
           />
         </svg>
-        Vehtvz
+        Nuvora
       </a>
       <nav
         aria-label="Main navigation"

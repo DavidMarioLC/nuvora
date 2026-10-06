@@ -1,6 +1,6 @@
 import { ImageResponse } from "next/og";
 
-export const alt = "Vehtvz — a marketing SaaS landing page portfolio demo";
+export const alt = "Nuvora — a marketing SaaS landing page portfolio demo";
 export const contentType = "image/png";
 export const size = { height: 630, width: 1200 };
 
@@ -19,7 +19,7 @@ export default function OpenGraphImage() {
       }}
     >
       <div style={{ display: "flex", fontSize: 32, fontWeight: 700 }}>
-        Vehtvz
+        Nuvora
       </div>
       <div
         style={{

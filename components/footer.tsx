@@ -40,7 +40,7 @@ export default function Footer() {
                   strokeWidth="3"
                 />
               </svg>
-              Vehtvz
+              Nuvora
             </a>
             <p>
               Less busy work. More possibility.
@@ -97,7 +97,7 @@ export default function Footer() {
               Good ideas start with
               <br />a conversation.
             </p>
-            <DemoButton label="Meet Vehtvz" />
+            <DemoButton label="Meet Nuvora" />
           </div>
           <div className="footer-newsletter">
             <h3>Get the latest inspiration</h3>
@@ -106,7 +106,7 @@ export default function Footer() {
           </div>
         </div>
         <div className="footer-bottom">
-          <p>© {new Date().getFullYear()} Vehtvz. All rights reserved.</p>
+          <p>© {new Date().getFullYear()} Nuvora. All rights reserved.</p>
           <p>Made for a brighter next chapter.</p>
         </div>
       </div>

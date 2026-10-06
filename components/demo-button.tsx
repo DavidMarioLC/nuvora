@@ -46,11 +46,11 @@ export default function DemoButton({
         >
           <X aria-hidden="true" size={18} strokeWidth={2} />
         </button>
-        <span className="eyebrow">WELCOME TO VEHTVZ</span>
+        <span className="eyebrow">WELCOME TO NUVORA</span>
         <h2 id={dialogTitle}>{title}</h2>
         <p>
           {login
-            ? "This is a preview of the Vehtvz platform. Account access will be available when the service launches."
+            ? "This is a preview of the Nuvora platform. Account access will be available when the service launches."
             : "Explore an all-in-one workspace for smarter campaigns, connected teams, and meaningful progress."}
         </p>
         {plan ? (

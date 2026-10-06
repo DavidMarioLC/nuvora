@@ -15,6 +15,6 @@ export const isIndexable =
   process.env.NODE_ENV === "production" &&
   process.env.VERCEL_ENV !== "preview";
 
-export const siteTitle = "Vehtvz — SaaS Landing Page | Portfolio Demo";
+export const siteTitle = "Nuvora — SaaS Landing Page | Portfolio Demo";
 export const siteDescription =
   "A responsive marketing SaaS landing page built with Next.js. A fictional brand and practice project showcasing UI design, accessibility, and frontend development.";

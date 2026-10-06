@@ -37,7 +37,7 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/bui
 
 ## SEO para el portafolio
 
-Vehtvz es una marca ficticia y esta página es una demo de práctica. El título,
+Nuvora es una marca ficticia y esta página es una demo de práctica. El título,
 la descripción y la tarjeta para compartir identifican el proyecto como tal.
 No se incluyen datos estructurados de empresa, reseñas ni productos reales.
 

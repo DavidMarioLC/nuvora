@@ -18,7 +18,7 @@ export const metadata: Metadata = {
   openGraph: {
     description: siteDescription,
     locale: "en_US",
-    siteName: "Vehtvz Portfolio Demo",
+    siteName: "Nuvora Portfolio Demo",
     title: siteTitle,
     type: "website",
     url: siteUrl ? new URL("/", siteUrl) : undefined,

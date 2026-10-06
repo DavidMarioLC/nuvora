@@ -10,7 +10,7 @@ const testimonials = [
     image: "/images/client.jpg",
     name: "Fabrizio Fernandez",
     quote:
-      "Vehtvz has changed the way I manage my entire team. The insights are clear, the workflows are effortless, and we finally have more time for the work we love.",
+      "Nuvora has changed the way I manage my entire team. The insights are clear, the workflows are effortless, and we finally have more time for the work we love.",
     role: "Founder, Studio North",
   },
   {

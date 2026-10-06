@@ -76,7 +76,7 @@ export default function JourneySection() {
               Get Started
             </a>
             <a
-              aria-label="Learn More about Vehtvz features"
+              aria-label="Learn More about Nuvora features"
               className="button button-outline button-small"
               href="#features"
             >
