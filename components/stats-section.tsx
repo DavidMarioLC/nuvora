@@ -1,11 +1,11 @@
+import MetricCounter from "./metric-counter";
+
 export default function StatsSection() {
   return (
     <section className="stats">
       <div className="stats-grid container">
         <div>
-          <strong>
-            50<span>+</span>
-          </strong>
+          <MetricCounter smallSuffix suffix="+" value={50} />
           <p>
             In 48 countries, we work
             <br />
@@ -13,7 +13,7 @@ export default function StatsSection() {
           </p>
         </div>
         <div>
-          <strong>2M</strong>
+          <MetricCounter decimal delay={0.08} suffix="M" value={2} />
           <p>
             Active users in the
             <br />
@@ -21,9 +21,7 @@ export default function StatsSection() {
           </p>
         </div>
         <div>
-          <strong>
-            85<span>%</span>
-          </strong>
+          <MetricCounter delay={0.16} smallSuffix suffix="%" value={85} />
           <p>
             We started with an ambitious mindset
             <br />
