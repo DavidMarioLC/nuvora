@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
+import HeroEntranceStyles from "../components/hero-entrance-styles";
 import { isIndexable, siteDescription, siteTitle, siteUrl } from "../lib/site";
 import "./globals.css";
 
@@ -37,6 +38,9 @@ export default function RootLayout({
 }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="en">
+      <head>
+        <HeroEntranceStyles />
+      </head>
       <body className={geist.variable}>{children}</body>
     </html>
   );

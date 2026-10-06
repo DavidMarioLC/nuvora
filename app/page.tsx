@@ -1,4 +1,5 @@
 import BenefitsSection from "@/components/benefits-section";
+import EntranceAnimations from "@/components/entrance-animations";
 import FeaturesSection from "@/components/features-section";
 import Footer from "@/components/footer";
 import HeroSection from "@/components/hero-section";
@@ -23,6 +24,7 @@ export default function Home() {
         <StoriesSection />
       </main>
       <Footer />
+      <EntranceAnimations />
     </>
   );
 }

@@ -1,7 +1,7 @@
 "use client";
 
 import { Search } from "lucide-react";
-import { useEffect, useRef, useState } from "react";
+import { type MouseEvent, useEffect, useRef, useState } from "react";
 import DemoButton from "./demo-button";
 
 const links = [
@@ -16,6 +16,7 @@ export default function Navigation() {
   const [open, setOpen] = useState(false);
   const navigation = useRef<HTMLElement>(null);
   const menuButton = useRef<HTMLButtonElement>(null);
+  const [pointerOpening, setPointerOpening] = useState(false);
 
   useEffect(() => {
     if (!open) {
@@ -35,7 +36,8 @@ export default function Navigation() {
   function closeMenu() {
     setOpen(false);
   }
-  function toggleMenu() {
+  function toggleMenu(event: MouseEvent<HTMLButtonElement>) {
+    setPointerOpening(event.detail > 0);
     setOpen((current) => !current);
   }
   return (
@@ -67,6 +69,7 @@ export default function Navigation() {
       <nav
         aria-label="Main navigation"
         className={open ? "navigation is-open" : "navigation"}
+        data-motion={pointerOpening ? "pointer" : "keyboard"}
         id="main-navigation"
         ref={navigation}
       >

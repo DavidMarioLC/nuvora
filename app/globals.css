@@ -1,6 +1,8 @@
 @import "tailwindcss";
 
 :root {
+  --entrance-blur: var(--blur-md, 12px);
+  --ease-out: cubic-bezier(0.23, 1, 0.32, 1);
   --focus-ring: #8241bf;
   --purple: #6812ba;
   --purple-dark: #50059b;
@@ -121,7 +123,6 @@ summary:focus-visible {
 }
 .button:hover {
   box-shadow: 0 5px 16px #4714781a;
-  transform: translateY(-2px);
 }
 .button-purple {
   color: white;
@@ -3420,14 +3421,16 @@ body:has(dialog[open]) {
       translate 0.2s,
       scale 0.2s;
   }
-  .demo-dialog[open],
-  .navigation.is-open {
-    animation: surface-enter 0.2s ease-out;
+  .demo-dialog[open] {
+    animation: surface-enter 0.2s var(--ease-out);
   }
 }
 @media (hover: hover) and (pointer: fine) and (
     prefers-reduced-motion: no-preference
   ) {
+  .button:hover {
+    transform: translateY(-2px);
+  }
   .feature-card:hover,
   .benefit-card:hover,
   .journey-card:hover,
@@ -3444,10 +3447,12 @@ body:has(dialog[open]) {
 }
 @keyframes surface-enter {
   from {
+    filter: blur(var(--entrance-blur));
     opacity: 0.6;
     scale: 0.98;
   }
   to {
+    filter: blur(0px);
     opacity: 1;
     scale: 1;
   }
