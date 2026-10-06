@@ -1,5 +1,21 @@
 # Visual assets
 
+## Fictional testimonial headshots
+
+- Files: `public/images/testimonials/fabrizio-fernandez.webp`, `public/images/testimonials/sarah-mitchell.webp`, `public/images/testimonials/alex-morgan.webp`.
+- Method: built-in `image_gen` tool; three original generated portraits of fictional people, without input photos or third-party stock photography.
+- Purpose: fictional client stories in this portfolio practice project. These portraits do not document real customers or endorsements.
+- Delivery: optimized 960px WebP assets, consumed by `components/stories.tsx` through Next.js Image. Generated originals are retained outside the repository.
+- These are AI-generated assets, not stock photos supplied under a CC0 or public-domain license.
+- Final prompts, in the same order as the files above:
+
+> Use case: photorealistic-natural. Asset type: headshot for a fictional client testimonial on a SaaS portfolio landing page. Create ONE individual square 1024x1024 professional editorial headshot, not a collage. Entire head and shoulders visible, head centered with generous space above hair, subject looking at camera with warm natural smile. Soft diffused studio window light, light warm gray seamless background, subtle natural skin texture, realistic eyes and hair, 85mm portrait lens. Chest-up framing with face occupying approximately 40 percent of image height; crop-safe for landscape cards. All people must be entirely fictional. No recognizable public figure, no text, logo, watermark, props, hands, border, or graphics. Subject: fictional male creative studio founder in his late 30s, medium olive skin, short dark wavy hair, neat light stubble, navy casual blazer over white crewneck shirt.
+
+> Use case: photorealistic-natural. Asset type: headshot for a fictional client testimonial on a SaaS portfolio landing page. Create ONE individual square 1024x1024 professional editorial headshot, not a collage. Entire head and shoulders visible, head centered with generous space above hair, subject looking at camera with warm natural smile. Soft diffused studio window light, light warm gray seamless background, subtle natural skin texture, realistic eyes and hair, 85mm portrait lens. Chest-up framing with face occupying approximately 40 percent of image height; crop-safe for landscape cards. All people must be entirely fictional. No recognizable public figure, no text, logo, watermark, props, hands, border, or graphics. Subject: fictional female marketing director in her mid 30s, fair skin, shoulder-length chestnut hair with soft waves, muted sage green blouse, confident and approachable.
+
+> Use case: photorealistic-natural. Asset type: headshot for a fictional client testimonial on a SaaS portfolio landing page. Create ONE individual square 1024x1024 professional editorial headshot, not a collage. Entire head and shoulders visible, head centered with generous space above hair, subject looking at camera with warm natural smile. Soft diffused studio window light, light warm gray seamless background, subtle natural skin texture, realistic eyes and hair, 85mm portrait lens. Chest-up framing with face occupying approximately 40 percent of image height; crop-safe for landscape cards. All people must be entirely fictional. No recognizable public figure, no text, logo, watermark, props, hands, border, or graphics. Subject: fictional male team lead in his early 30s, dark brown skin, short natural curly black hair, clean-shaven, charcoal knit polo, friendly and relaxed.
+
+
 ## Hero portrait
 
 - File: `public/images/hero.png`

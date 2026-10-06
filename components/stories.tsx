@@ -7,21 +7,21 @@ import StarRating from "./star-rating";
 
 const testimonials = [
   {
-    image: "/images/client.jpg",
+    image: "/images/testimonials/fabrizio-fernandez.webp",
     name: "Fabrizio Fernandez",
     quote:
       "Nuvora has changed the way I manage my entire team. The insights are clear, the workflows are effortless, and we finally have more time for the work we love.",
     role: "Founder, Studio North",
   },
   {
-    image: "/images/hero.png",
+    image: "/images/testimonials/sarah-mitchell.webp",
     name: "Sarah Mitchell",
     quote:
       "From our first campaign to our biggest launch, everything feels connected. Our team spends less time on admin and more time bringing great ideas to life.",
     role: "Marketing Director, Bloom",
   },
   {
-    image: "/images/team.jpg",
+    image: "/images/testimonials/alex-morgan.webp",
     name: "Alex Morgan",
     quote:
       "Having our tools and our people in one place made all the difference. We’re moving faster, collaborating better, and growing with confidence.",
