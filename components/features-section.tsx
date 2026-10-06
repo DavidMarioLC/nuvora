@@ -22,7 +22,11 @@ export default function FeaturesSection() {
               tools and build intelligent workflows that handle repetitive tasks
               with precision and efficiency.
             </p>
-            <a className="button button-purple button-small" href="#journey">
+            <a
+              aria-label="Learn More about Seamless Integrations"
+              className="button button-purple button-small"
+              href="#journey"
+            >
               Learn More
             </a>
           </div>
@@ -47,7 +51,11 @@ export default function FeaturesSection() {
               Bring your people, ideas, and projects together. Great work
               happens when everyone is connected.
             </p>
-            <a className="text-link" href="#benefits">
+            <a
+              aria-label="Learn More about Real-Time Collaboration"
+              className="text-link"
+              href="#benefits"
+            >
               Learn More
             </a>
           </div>
@@ -60,7 +68,11 @@ export default function FeaturesSection() {
               Your business deserves peace of mind. Keep every connection and
               conversation protected.
             </p>
-            <a className="text-link" href="#benefits">
+            <a
+              aria-label="Learn More about Enterprise-Grade Security"
+              className="text-link"
+              href="#benefits"
+            >
               Learn More
             </a>
           </div>
@@ -108,7 +120,11 @@ export default function FeaturesSection() {
               <li>Scale effortlessly</li>
               <li>Cost-effective solutions</li>
             </ul>
-            <a className="button button-purple button-small" href="#pricing">
+            <a
+              aria-label="Learn More about Scalable & Customizable"
+              className="button button-purple button-small"
+              href="#pricing"
+            >
               Learn More
             </a>
           </div>

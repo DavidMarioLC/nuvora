@@ -84,7 +84,7 @@ export default function Footer() {
             </div>
           </div>
           <div className="footer-links">
-            <h4>Navigation</h4>
+            <h3>Navigation</h3>
             <a href="#home">Home</a>
             <a href="#features">Features</a>
             <a href="#benefits">Benefits</a>
@@ -92,7 +92,7 @@ export default function Footer() {
             <a href="#stories">Our stories</a>
           </div>
           <div className="footer-links">
-            <h4>Let’s talk</h4>
+            <h3>Let’s talk</h3>
             <p>
               Good ideas start with
               <br />a conversation.
@@ -100,7 +100,7 @@ export default function Footer() {
             <DemoButton label="Meet Vehtvz" />
           </div>
           <div className="footer-newsletter">
-            <h4>Get the latest inspiration</h4>
+            <h3>Get the latest inspiration</h3>
             <p>A little growth, straight to your inbox.</p>
             <EmailSignup variant="footer" />
           </div>

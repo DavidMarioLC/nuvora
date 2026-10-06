@@ -6,7 +6,7 @@ import RecordCard from "./record-card";
 
 export default function PayrollVisual() {
   return (
-    <div className="payroll-artwork">
+    <div aria-hidden="true" className="payroll-artwork">
       <div aria-hidden="true" className="payroll-backdrop" />
       <PolicyCard />
       <IncidentCard />

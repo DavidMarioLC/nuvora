@@ -16,13 +16,21 @@ export default function DemoButton({
 }) {
   const dialog = useRef<HTMLDialogElement>(null);
   const dialogTitle = useId();
+  function openDialog() {
+    dialog.current?.showModal();
+  }
+  function closeDialog() {
+    dialog.current?.close();
+  }
+  let title = "A little help. A lot of growth.";
+  if (login) {
+    title = "Your next chapter starts here.";
+  } else if (plan) {
+    title = `Meet your ${plan} plan.`;
+  }
   return (
     <>
-      <button
-        className={className}
-        onClick={() => dialog.current?.showModal()}
-        type="button"
-      >
+      <button className={className} onClick={openDialog} type="button">
         {label}
       </button>
       <dialog
@@ -33,34 +41,29 @@ export default function DemoButton({
         <button
           aria-label="Close dialog"
           className="dialog-close"
-          onClick={() => dialog.current?.close()}
+          onClick={closeDialog}
           type="button"
         >
           <X aria-hidden="true" size={18} strokeWidth={2} />
         </button>
         <span className="eyebrow">WELCOME TO VEHTVZ</span>
-        <h2 id={dialogTitle}>
-          {login
-            ? "Your next chapter starts here."
-            : plan
-              ? `Meet your ${plan} plan.`
-              : "A little help. A lot of growth."}
-        </h2>
+        <h2 id={dialogTitle}>{title}</h2>
         <p>
           {login
             ? "This is a preview of the Vehtvz platform. Account access will be available when the service launches."
             : "Explore an all-in-one workspace for smarter campaigns, connected teams, and meaningful progress."}
         </p>
-        {plan && (
+        {plan ? (
           <div className="dialog-plan">
             Selected plan <strong>{plan}</strong>
             <small>Plan selection is a preview; no payment is collected.</small>
           </div>
-        )}
+        ) : null}
+        {/* biome-ignore lint/a11y/useValidAnchor: The link navigates to features while dismissing the preview dialog. */}
         <a
           className="button button-purple"
           href="#features"
-          onClick={() => dialog.current?.close()}
+          onClick={closeDialog}
         >
           Explore the features
         </a>

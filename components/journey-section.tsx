@@ -54,7 +54,7 @@ export default function JourneySection() {
           <div className="journey-step">
             <span>01</span>
             <div>
-              <h4>Sign Up in Minutes</h4>
+              <h3>Sign Up in Minutes</h3>
               <p>
                 A fresh start for your business. Pick your plan and make
                 yourself at home.
@@ -64,7 +64,7 @@ export default function JourneySection() {
           <div className="journey-step">
             <span>02</span>
             <div>
-              <h4>Connect Your Accounts Securely</h4>
+              <h3>Connect Your Accounts Securely</h3>
               <p>
                 Bring your favorite tools together and let your workflow take
                 care of the rest.
@@ -75,7 +75,11 @@ export default function JourneySection() {
             <a className="button button-purple button-small" href="#pricing">
               Get Started
             </a>
-            <a className="button button-outline button-small" href="#features">
+            <a
+              aria-label="Learn More about Vehtvz features"
+              className="button button-outline button-small"
+              href="#features"
+            >
               Learn More
             </a>
           </div>

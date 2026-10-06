@@ -2,7 +2,7 @@
 
 import { ArrowLeft, ArrowRight, Quote } from "lucide-react";
 import Image from "next/image";
-import { useState } from "react";
+import { type MouseEvent, useState } from "react";
 import StarRating from "./star-rating";
 
 const testimonials = [
@@ -32,6 +32,17 @@ const testimonials = [
 export default function Stories() {
   const [index, setIndex] = useState(0);
   const story = testimonials[index];
+  function selectTestimonial(event: MouseEvent<HTMLButtonElement>) {
+    setIndex(Number(event.currentTarget.dataset.index));
+  }
+  function previousTestimonial() {
+    setIndex(
+      (current) => (current + testimonials.length - 1) % testimonials.length
+    );
+  }
+  function nextTestimonial() {
+    setIndex((current) => (current + 1) % testimonials.length);
+  }
   return (
     <div className="testimonial">
       <div className="testimonial-photo">
@@ -64,8 +75,9 @@ export default function Stories() {
                 aria-label={`Show testimonial from ${item.name}`}
                 aria-pressed={i === index}
                 className={i === index ? "active" : ""}
+                data-index={i}
                 key={item.name}
-                onClick={() => setIndex(i)}
+                onClick={selectTestimonial}
                 type="button"
               />
             ))}
@@ -73,18 +85,14 @@ export default function Stories() {
           <div className="story-arrows">
             <button
               aria-label="Previous testimonial"
-              onClick={() =>
-                setIndex(
-                  (index + testimonials.length - 1) % testimonials.length
-                )
-              }
+              onClick={previousTestimonial}
               type="button"
             >
               <ArrowLeft aria-hidden="true" size={18} strokeWidth={1.7} />
             </button>
             <button
               aria-label="Next testimonial"
-              onClick={() => setIndex((index + 1) % testimonials.length)}
+              onClick={nextTestimonial}
               type="button"
             >
               <ArrowRight aria-hidden="true" size={18} strokeWidth={1.7} />

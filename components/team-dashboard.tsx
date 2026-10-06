@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function TeamDashboard() {
   return (
-    <div className="team-dashboard">
+    <div aria-hidden="true" className="team-dashboard">
       <div className="dashboard-top">
         <div className="window-dots">•••</div>
         <span>All employees⌄</span>

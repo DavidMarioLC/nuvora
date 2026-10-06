@@ -1,7 +1,7 @@
 "use client";
 
 import { Check, Plus } from "lucide-react";
-import { useState } from "react";
+import { useState, useSyncExternalStore } from "react";
 import DemoButton from "./demo-button";
 
 const plans = [
@@ -46,15 +46,49 @@ const plans = [
   },
 ];
 
+const mobilePlans = [plans[1], plans[0], plans[2]];
+const mobileQuery = "(max-width: 650px)";
+function subscribeLayout(onChange: () => void) {
+  const query = window.matchMedia(mobileQuery);
+  query.addEventListener("change", onChange);
+  return () => query.removeEventListener("change", onChange);
+}
+function getMobileLayout() {
+  return window.matchMedia(mobileQuery).matches;
+}
+function getServerLayout() {
+  return false;
+}
+
 export default function Pricing() {
   const [yearly, setYearly] = useState(false);
+  const mobile = useSyncExternalStore(
+    subscribeLayout,
+    getMobileLayout,
+    getServerLayout
+  );
+  function billingDescription(price: number) {
+    if (price === 0) {
+      return "No credit card required";
+    }
+    if (yearly) {
+      return `Billed yearly · $${(price * 0.8 * 12).toFixed(2)} per user`;
+    }
+    return "Billed monthly · cancel anytime";
+  }
+  function selectMonthly() {
+    setYearly(false);
+  }
+  function selectYearly() {
+    setYearly(true);
+  }
   return (
     <>
       <div className="billing-toggle">
         <button
           aria-pressed={!yearly}
           className={yearly ? "" : "active"}
-          onClick={() => setYearly(false)}
+          onClick={selectMonthly}
           type="button"
         >
           Monthly
@@ -62,14 +96,14 @@ export default function Pricing() {
         <button
           aria-pressed={yearly}
           className={yearly ? "active" : ""}
-          onClick={() => setYearly(true)}
+          onClick={selectYearly}
           type="button"
         >
           Yearly <span>Save 20%</span>
         </button>
       </div>
       <div className="pricing-grid">
-        {plans.map((plan) => (
+        {(mobile ? mobilePlans : plans).map((plan) => (
           <article
             className={`price-card ${plan.name === "Enterprise" ? "featured" : ""}`}
             key={plan.name}
@@ -86,11 +120,7 @@ export default function Pricing() {
               </span>
             </div>
             <small className="billing-detail">
-              {plan.price === 0
-                ? "No credit card required"
-                : yearly
-                  ? `Billed yearly · $${(plan.price * 0.8 * 12).toFixed(2)} per user`
-                  : "Billed monthly · cancel anytime"}
+              {billingDescription(plan.price)}
             </small>
             <DemoButton
               className={`button ${plan.name === "Enterprise" ? "button-white" : "button-purple"}`}

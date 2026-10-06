@@ -1,4 +1,7 @@
+import { useId } from "react";
+
 export default function LineChart() {
+  const gradientId = useId();
   return (
     <div className="line-chart">
       <div className="mini-chart-heading">
@@ -13,7 +16,7 @@ export default function LineChart() {
         viewBox="0 0 280 105"
       >
         <defs>
-          <linearGradient id="line-gradient">
+          <linearGradient id={gradientId}>
             <stop stopColor="#a0e4e2" />
             <stop offset=".5" stopColor="#ac93e9" />
             <stop offset="1" stopColor="#f0b2ed" />
@@ -21,7 +24,7 @@ export default function LineChart() {
         </defs>
         <path
           d="M4 54C17 54 18 76 30 76S46 43 59 45s14 31 28 23 12-32 27-31 15 26 30 29 17-22 32-15 12 25 27 19 17-30 30-34 15 5 25-6 8-21 18-27"
-          stroke="url(#line-gradient)"
+          stroke={`url(#${gradientId})`}
           strokeWidth="3"
         />
         <path d="M141 23v61" stroke="#b9b2c8" strokeDasharray="3 3" />

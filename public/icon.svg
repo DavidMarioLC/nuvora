@@ -1,1 +1,12 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40"><rect width="40" height="40" rx="11" fill="#6913bb"/><path d="M10 23a11 11 0 1 1 6 7M10 23l-2 7 7-2m0-13 5 8 6-12" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+<svg viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
+  <title>Vehtvz</title>
+  <rect fill="#6913bb" height="40" rx="11" width="40" />
+  <path
+    d="M10 23a11 11 0 1 1 6 7M10 23l-2 7 7-2m0-13 5 8 6-12"
+    fill="none"
+    stroke="#fff"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    stroke-width="3"
+  />
+</svg>

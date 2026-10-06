@@ -116,20 +116,20 @@ export default function HeroSection() {
             </div>
           </div>
         </div>
-        <div aria-label="Trusted by leading brands" className="brands">
-          <span className="brand-google">Google</span>
-          <span className="brand-afterpay">
+        <ul aria-label="Trusted by leading brands" className="brands">
+          <li className="brand-google">Google</li>
+          <li className="brand-afterpay">
             afterpay <b>↔</b>
-          </span>
-          <span className="brand-asana">
+          </li>
+          <li className="brand-asana">
             <i>
               <b />
               <b />
               <b />
             </i>
             asana
-          </span>
-          <span className="brand-dropbox">
+          </li>
+          <li className="brand-dropbox">
             <svg aria-hidden="true" viewBox="0 0 24 24">
               <path
                 d="m6 2 6 4-6 4-6-4 6-4Zm12 0 6 4-6 4-6-4 6-4ZM6 10l6 4-6 4-6-4 6-4Zm12 0 6 4-6 4-6-4 6-4Zm-6 6 6 4-6 4-6-4 6-4Z"
@@ -137,8 +137,8 @@ export default function HeroSection() {
               />
             </svg>
             Dropbox
-          </span>
-          <span className="brand-spotify">
+          </li>
+          <li className="brand-spotify">
             <svg aria-hidden="true" viewBox="0 0 24 24">
               <circle cx="12" cy="12" fill="currentColor" r="11" />
               <path
@@ -150,11 +150,11 @@ export default function HeroSection() {
               />
             </svg>
             Spotify
-          </span>
-          <span className="brand-grammarly">
+          </li>
+          <li className="brand-grammarly">
             <b>G</b>grammarly
-          </span>
-        </div>
+          </li>
+        </ul>
       </div>
     </section>
   );

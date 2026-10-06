@@ -1,7 +1,7 @@
 "use client";
 
 import { Search } from "lucide-react";
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import DemoButton from "./demo-button";
 
 const links = [
@@ -14,6 +14,30 @@ const links = [
 
 export default function Navigation() {
   const [open, setOpen] = useState(false);
+  const navigation = useRef<HTMLElement>(null);
+  const menuButton = useRef<HTMLButtonElement>(null);
+
+  useEffect(() => {
+    if (!open) {
+      return;
+    }
+    navigation.current?.querySelector<HTMLAnchorElement>("a")?.focus();
+    function handleEscape(event: KeyboardEvent) {
+      if (event.key === "Escape") {
+        setOpen(false);
+        menuButton.current?.focus();
+      }
+    }
+    window.addEventListener("keydown", handleEscape);
+    return () => window.removeEventListener("keydown", handleEscape);
+  }, [open]);
+
+  function closeMenu() {
+    setOpen(false);
+  }
+  function toggleMenu() {
+    setOpen((current) => !current);
+  }
   return (
     <header className="header">
       <a aria-label="Vehtvz home" className="logo" href="#home">
@@ -44,9 +68,10 @@ export default function Navigation() {
         aria-label="Main navigation"
         className={open ? "navigation is-open" : "navigation"}
         id="main-navigation"
+        ref={navigation}
       >
         {links.map(([title, href]) => (
-          <a href={href} key={title} onClick={() => setOpen(false)}>
+          <a href={href} key={title} onClick={closeMenu}>
             {title}
           </a>
         ))}
@@ -69,7 +94,8 @@ export default function Navigation() {
           aria-expanded={open}
           aria-label={open ? "Close menu" : "Open menu"}
           className="menu-toggle"
-          onClick={() => setOpen(!open)}
+          onClick={toggleMenu}
+          ref={menuButton}
           type="button"
         >
           {open ? (
