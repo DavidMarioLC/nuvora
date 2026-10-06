@@ -3386,6 +3386,72 @@ body:has(dialog[open]) {
     font-size: 25px;
   }
 }
+/* Small interaction cues preserve layout and respect motion preferences. */
+@media (prefers-reduced-motion: no-preference) {
+  .button,
+  .email-form button,
+  .billing-toggle button,
+  .story-arrows > button,
+  .footer-socials > a {
+    transition:
+      background 0.2s,
+      color 0.2s,
+      box-shadow 0.2s,
+      transform 0.2s,
+      scale 0.15s;
+  }
+  .button:active,
+  .email-form button:active,
+  .billing-toggle button:active,
+  .story-arrows > button:active,
+  .footer-socials > a:active {
+    scale: 0.97;
+  }
+  .feature-card,
+  .benefit-card,
+  .journey-card,
+  .price-card {
+    transition: box-shadow 0.25s;
+  }
+  .button > svg,
+  .text-link > svg,
+  .footer-socials svg {
+    transition:
+      translate 0.2s,
+      scale 0.2s;
+  }
+  .demo-dialog[open],
+  .navigation.is-open {
+    animation: surface-enter 0.2s ease-out;
+  }
+}
+@media (hover: hover) and (pointer: fine) and (
+    prefers-reduced-motion: no-preference
+  ) {
+  .feature-card:hover,
+  .benefit-card:hover,
+  .journey-card:hover,
+  .price-card:hover {
+    box-shadow: 0 10px 28px #47147814;
+  }
+  .button:hover > svg,
+  .text-link:hover > svg {
+    translate: 3px 0;
+  }
+  .footer-socials > a:hover svg {
+    scale: 1.12;
+  }
+}
+@keyframes surface-enter {
+  from {
+    opacity: 0.6;
+    scale: 0.98;
+  }
+  to {
+    opacity: 1;
+    scale: 1;
+  }
+}
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;
