@@ -34,7 +34,7 @@ export default function EmailSignup({
           }
           autoComplete="email"
           name="email"
-          placeholder="Your email address"
+          placeholder="Email address"
           required
           spellCheck={false}
           type="email"

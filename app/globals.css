@@ -8,6 +8,10 @@
   --muted: #706779;
   --surface: #f7f7f9;
   --font-sans: var(--font-geist-sans);
+  --text-body: 0.875rem;
+  --text-label: 0.8125rem;
+  --text-small: 0.75rem;
+  --text-input: 1rem;
 }
 * {
   box-sizing: border-box;
@@ -141,12 +145,12 @@ summary:focus-visible {
 .button-small {
   min-height: 36px;
   padding: 10px 19px;
-  font-size: 12px;
+  font-size: var(--text-label);
 }
 .text-link {
   display: inline-block;
   margin-top: 10px;
-  font-size: 12px;
+  font-size: var(--text-label);
   font-weight: 600;
   color: var(--purple);
 }
@@ -243,7 +247,7 @@ summary:focus-visible {
 .login-button {
   min-height: 35px;
   padding: 10px 27px;
-  font-size: 12px;
+  font-size: var(--text-label);
 }
 .menu-toggle {
   display: none;
@@ -261,7 +265,7 @@ summary:focus-visible {
   align-items: center;
   padding: 7px 12px;
   margin-bottom: 28px;
-  font-size: 11px;
+  font-size: var(--text-label);
   background: #ffffff03;
   border: 1px solid #ffffff24;
   border-radius: 40px;
@@ -319,7 +323,7 @@ summary:focus-visible {
   width: 100%;
   min-width: 0;
   padding: 7px 0;
-  font-size: 11px;
+  font-size: var(--text-input);
   color: white;
   outline: 0;
   background: transparent;
@@ -332,7 +336,7 @@ summary:focus-visible {
   flex-shrink: 0;
   min-height: 33px;
   padding: 10px 17px;
-  font-size: 10px;
+  font-size: var(--text-label);
   font-weight: 650;
   color: #4f1283;
   white-space: nowrap;
@@ -395,14 +399,14 @@ summary:focus-visible {
 }
 .stars > span {
   margin-left: 3px;
-  font-size: 10px;
+  font-size: var(--text-small);
   color: #d6b8eb;
   letter-spacing: 0;
 }
 .social-proof small {
   display: block;
   margin-top: 3px;
-  font-size: 10px;
+  font-size: var(--text-small);
   color: #d9bcec;
 }
 .hero-visual {
@@ -825,7 +829,7 @@ summary:focus-visible {
 }
 .feature-copy p {
   margin-top: 9px;
-  font-size: 11px;
+  font-size: var(--text-body);
   line-height: 1.65;
   color: #706779;
 }
@@ -834,7 +838,7 @@ summary:focus-visible {
 }
 .integration-card .feature-copy p {
   margin: 12px 0 16px;
-  font-size: 12px;
+  font-size: var(--text-body);
 }
 .collaboration-visual {
   height: 144px;
@@ -919,7 +923,7 @@ summary:focus-visible {
 .collaboration-card p,
 .security-card p {
   margin-top: 6px;
-  font-size: 10px;
+  font-size: var(--text-body);
   line-height: 1.5;
 }
 .line-chart {
@@ -1051,14 +1055,14 @@ summary:focus-visible {
   font-size: 15px;
 }
 .scale-card p {
-  font-size: 10px;
+  font-size: var(--text-body);
 }
 .mini-checks {
   display: grid;
   gap: 6px;
   margin: 12px 0 16px;
-  font-size: 9px;
-  color: #92909b;
+  font-size: var(--text-small);
+  color: var(--muted);
 }
 .mini-checks > li:before {
   display: inline-grid;
@@ -1075,7 +1079,7 @@ summary:focus-visible {
 .scale-card .button {
   min-height: 26px;
   padding: 7px 12px;
-  font-size: 9px;
+  font-size: var(--text-label);
 }
 /* Benefits */
 .benefits {
@@ -1112,7 +1116,7 @@ summary:focus-visible {
 .benefit-copy p {
   max-width: 390px;
   margin-top: 10px;
-  font-size: 13px;
+  font-size: var(--text-body);
   line-height: 1.6;
   color: #706779;
 }
@@ -1462,7 +1466,7 @@ summary:focus-visible {
 }
 .stats p {
   margin-top: 12px;
-  font-size: 11px;
+  font-size: var(--text-body);
   line-height: 1.6;
   color: #c6a1e6;
 }
@@ -1496,7 +1500,7 @@ summary:focus-visible {
 .eyebrow {
   display: block;
   margin-bottom: 16px;
-  font-size: 10px;
+  font-size: var(--text-small);
   font-weight: 650;
   color: #9168b9;
   letter-spacing: 1.8px;
@@ -1510,7 +1514,7 @@ summary:focus-visible {
 .journey-copy > p {
   max-width: 440px;
   margin-top: 17px;
-  font-size: 12px;
+  font-size: var(--text-body);
   line-height: 1.7;
   color: #706779;
 }
@@ -1519,7 +1523,7 @@ summary:focus-visible {
   grid-template-columns: 1fr 1fr;
   gap: 11px 18px;
   margin: 21px 0;
-  font-size: 10px;
+  font-size: var(--text-small);
   color: #746b80;
 }
 .journey-checks > li {
@@ -1552,7 +1556,7 @@ summary:focus-visible {
   place-items: center;
   width: 32px;
   height: 32px;
-  font-size: 10px;
+  font-size: var(--text-small);
   color: #8046b6;
   background: #eee2f9;
   border: 4px solid #f3ecfa;
@@ -1560,13 +1564,13 @@ summary:focus-visible {
 }
 .journey-step h3 {
   margin-top: 2px;
-  font-size: 12px;
+  font-size: var(--text-label);
   font-weight: 600;
 }
 .journey-step p {
   max-width: 305px;
   margin-top: 5px;
-  font-size: 10px;
+  font-size: var(--text-body);
   line-height: 1.6;
   color: #706779;
 }
@@ -1697,7 +1701,7 @@ summary:focus-visible {
   gap: 7px;
   align-items: center;
   padding: 9px 15px;
-  font-size: 11px;
+  font-size: var(--text-label);
   color: #807487;
   background: transparent;
   border-radius: 24px;
@@ -1712,7 +1716,7 @@ summary:focus-visible {
 }
 .billing-toggle button > span {
   padding: 3px 5px;
-  font-size: 8px;
+  font-size: var(--text-small);
   color: #8957b1;
   background: #e9ddf6;
   border-radius: 4px;
@@ -1746,7 +1750,7 @@ summary:focus-visible {
 .price-card > p {
   min-height: 32px;
   margin-top: 8px;
-  font-size: 11px;
+  font-size: var(--text-body);
   line-height: 1.5;
   color: #706779;
 }
@@ -1763,15 +1767,15 @@ summary:focus-visible {
   letter-spacing: -2px;
 }
 .price > span {
-  max-width: 55px;
-  font-size: 9px;
+  max-width: 76px;
+  font-size: var(--text-small);
   line-height: 1.6;
   color: #706779;
 }
 .billing-detail {
   display: block;
   margin-top: 10px;
-  font-size: 9px;
+  font-size: var(--text-small);
   color: #706779;
 }
 .price-card > .button {
@@ -1779,7 +1783,7 @@ summary:focus-visible {
   min-height: 39px;
   padding: 11px 10px;
   margin: 22px 0;
-  font-size: 11px;
+  font-size: var(--text-label);
   border-radius: 6px;
 }
 .price-card ul {
@@ -1791,7 +1795,7 @@ summary:focus-visible {
   display: flex;
   gap: 8px;
   align-items: center;
-  font-size: 11px;
+  font-size: var(--text-body);
   color: #706779;
 }
 .price-card li > span {
@@ -1813,7 +1817,7 @@ summary:focus-visible {
   justify-content: space-between;
   min-height: 54px;
   padding: 14px var(--plan-padding);
-  font-size: 11px;
+  font-size: var(--text-label);
   font-weight: 600;
   color: #7e728a;
   cursor: pointer;
@@ -1847,7 +1851,7 @@ summary:focus-visible {
 }
 .price-card details > p {
   padding: 0 var(--plan-padding) 18px;
-  font-size: 11px;
+  font-size: var(--text-body);
   line-height: 1.7;
   color: #706779;
 }
@@ -1865,7 +1869,7 @@ summary:focus-visible {
   top: 15px;
   right: 22px;
   padding: 5px 8px;
-  font-size: 7px;
+  font-size: var(--text-small);
   color: #dcc3f1;
   letter-spacing: 1px;
   border: 1px solid #ffffff30;
@@ -1961,7 +1965,7 @@ summary:focus-visible {
   font-weight: 650;
 }
 .testimonial-author > span {
-  font-size: 11px;
+  font-size: var(--text-small);
   color: #706779;
 }
 .story-controls {
@@ -2044,7 +2048,7 @@ footer {
 .footer-heading .button {
   min-height: 37px;
   padding: 11px 19px;
-  font-size: 11px;
+  font-size: var(--text-label);
 }
 .footer-heading svg {
   width: 14px;
@@ -2066,7 +2070,7 @@ footer {
 .footer-about > p {
   max-width: 275px;
   margin-top: 17px;
-  font-size: 11px;
+  font-size: var(--text-body);
   line-height: 1.8;
   color: #cbaaeb;
 }
@@ -2099,7 +2103,7 @@ footer {
 }
 .footer-grid h3 {
   margin-bottom: 16px;
-  font-size: 12px;
+  font-size: var(--text-label);
   font-weight: 600;
 }
 .footer-links {
@@ -2109,7 +2113,7 @@ footer {
 }
 .footer-links > a {
   margin-bottom: 11px;
-  font-size: 10px;
+  font-size: var(--text-body);
   color: #d1b2eb;
 }
 .footer-links > a:hover {
@@ -2117,20 +2121,20 @@ footer {
 }
 .footer-links > p {
   margin-bottom: 14px;
-  font-size: 11px;
+  font-size: var(--text-body);
   line-height: 1.8;
   color: #d1b2eb;
 }
 .footer-links > .button {
   min-height: 30px;
   padding: 8px 12px;
-  font-size: 10px;
+  font-size: var(--text-label);
   background: #ffffff14;
   border: 1px solid #ffffff30;
 }
 .footer-newsletter > p {
   margin-bottom: 15px;
-  font-size: 10px;
+  font-size: var(--text-body);
   line-height: 1.6;
   color: #d1b2eb;
 }
@@ -2144,7 +2148,7 @@ footer {
   display: none;
 }
 .signup-footer input {
-  font-size: 10px;
+  font-size: var(--text-input);
   color: #492461;
 }
 .signup-footer input::placeholder {
@@ -2169,7 +2173,7 @@ footer {
 }
 .form-message {
   margin-top: 9px;
-  font-size: 10px;
+  font-size: var(--text-small);
   line-height: 1.6;
   color: #e4cdf8;
 }
@@ -2177,7 +2181,7 @@ footer {
   display: flex;
   justify-content: space-between;
   padding-top: 20px;
-  font-size: 9px;
+  font-size: var(--text-small);
   color: #caaae7;
   border-top: 1px solid #ffffff18;
 }
@@ -2226,14 +2230,14 @@ footer {
 .preview-note {
   display: block;
   margin-bottom: 24px;
-  font-size: 11px;
+  font-size: var(--text-small);
   line-height: 1.7;
   color: #706779;
 }
 .dialog-plan {
   padding: 18px;
   margin-bottom: 24px;
-  font-size: 11px;
+  font-size: var(--text-body);
   color: #706779;
   background: #f7f0fc;
   border-radius: 12px;
@@ -2284,7 +2288,7 @@ body:has(dialog[open]) {
     height: 420px;
   }
   .hero-copy > p {
-    font-size: 13px;
+    font-size: var(--text-body);
   }
   .navigation {
     gap: 22px;
@@ -2351,7 +2355,7 @@ body:has(dialog[open]) {
   }
   .journey-checks {
     gap: 10px;
-    font-size: 9px;
+    font-size: var(--text-small);
   }
   .footer-grid {
     gap: 30px;
@@ -2379,7 +2383,7 @@ body:has(dialog[open]) {
     letter-spacing: -1.8px;
   }
   .hero-copy > p {
-    font-size: 12px;
+    font-size: var(--text-body);
   }
   .hero-visual {
     height: 350px;
@@ -2454,7 +2458,7 @@ body:has(dialog[open]) {
     gap: 16px;
   }
   .navigation > a {
-    font-size: 11px;
+    font-size: var(--text-label);
   }
   .header-actions {
     gap: 10px;
@@ -2513,7 +2517,7 @@ body:has(dialog[open]) {
   .collaboration-card p,
   .security-card p {
     margin-top: 10px;
-    font-size: 12px;
+    font-size: var(--text-body);
   }
   .collaboration-card .feature-copy,
   .security-card .feature-copy {
@@ -2528,20 +2532,20 @@ body:has(dialog[open]) {
     font-size: 20px;
   }
   .scale-card p {
-    font-size: 12px;
+    font-size: var(--text-body);
   }
   .mini-checks {
-    font-size: 10px;
+    font-size: var(--text-small);
   }
   .scale-card .button {
     padding: 9px 16px;
-    font-size: 11px;
+    font-size: var(--text-label);
   }
   .benefit-copy h3 {
     font-size: 20px;
   }
   .benefit-copy p {
-    font-size: 12px;
+    font-size: var(--text-body);
   }
   .benefit-card {
     padding: 24px 20px 0;
@@ -2578,7 +2582,7 @@ body:has(dialog[open]) {
     font-size: 42px;
   }
   .stats p {
-    font-size: 10px;
+    font-size: var(--text-body);
   }
   .journey-card {
     grid-template-columns: 1fr 1.15fr;
@@ -2589,10 +2593,10 @@ body:has(dialog[open]) {
     font-size: 27px;
   }
   .journey-copy > p {
-    font-size: 11px;
+    font-size: var(--text-body);
   }
   .eyebrow {
-    font-size: 8px;
+    font-size: var(--text-small);
     letter-spacing: 1.2px;
   }
   .journey-checks {
@@ -2609,7 +2613,7 @@ body:has(dialog[open]) {
     height: 285px;
   }
   .journey-step p {
-    font-size: 9px;
+    font-size: var(--text-body);
   }
   .journey-badge {
     padding: 9px;
@@ -2631,11 +2635,11 @@ body:has(dialog[open]) {
   }
   .price-card > p {
     min-height: 32px;
-    font-size: 10px;
+    font-size: var(--text-body);
   }
   .price-card li {
     gap: 6px;
-    font-size: 10px;
+    font-size: var(--text-body);
   }
   .price-card details {
     margin-inline: -20px;
@@ -2645,7 +2649,7 @@ body:has(dialog[open]) {
   }
   .popular-label {
     right: 15px;
-    font-size: 6px;
+    font-size: var(--text-small);
   }
   .testimonial {
     gap: 32px;
@@ -2665,10 +2669,10 @@ body:has(dialog[open]) {
     max-width: 380px;
   }
   .footer-about > p {
-    font-size: 11px;
+    font-size: var(--text-body);
   }
   .footer-links > a {
-    font-size: 11px;
+    font-size: var(--text-body);
   }
   .footer-grid h3 {
     font-size: 13px;
@@ -2697,7 +2701,7 @@ body:has(dialog[open]) {
   .login-button {
     min-height: 33px;
     padding: 9px 20px;
-    font-size: 11px;
+    font-size: var(--text-label);
   }
   .menu-toggle {
     display: flex;
@@ -2753,7 +2757,7 @@ body:has(dialog[open]) {
   .version-pill {
     padding: 7px 11px;
     margin-bottom: 26px;
-    font-size: 10px;
+    font-size: var(--text-label);
   }
   .hero h1 {
     font-size: clamp(42px, 9.7vw, 61px);
@@ -2763,7 +2767,7 @@ body:has(dialog[open]) {
   .hero-copy > p {
     max-width: 400px;
     margin-top: 28px;
-    font-size: 13px;
+    font-size: var(--text-body);
     line-height: 1.75;
   }
   .signup-hero {
@@ -2771,11 +2775,11 @@ body:has(dialog[open]) {
     margin-top: 25px;
   }
   .email-form input {
-    font-size: 12px;
+    font-size: var(--text-input);
   }
   .email-form button {
     padding: 11px 18px;
-    font-size: 11px;
+    font-size: var(--text-label);
   }
   .email-form {
     padding-left: 14px;
@@ -2873,7 +2877,7 @@ body:has(dialog[open]) {
   .section-heading p {
     max-width: 370px;
     margin: 13px auto 0;
-    font-size: 12px;
+    font-size: var(--text-body);
     line-height: 1.7;
   }
   .desktop-break {
@@ -2903,7 +2907,7 @@ body:has(dialog[open]) {
   }
   .integration-card .feature-copy p {
     margin: 10px 0 17px;
-    font-size: 12px;
+    font-size: var(--text-body);
   }
   .donut-card {
     top: -45px;
@@ -2964,11 +2968,11 @@ body:has(dialog[open]) {
   }
   .collaboration-card p,
   .security-card p {
-    font-size: 12px;
+    font-size: var(--text-body);
     line-height: 1.65;
   }
   .text-link {
-    font-size: 11px;
+    font-size: var(--text-label);
   }
   .security-card > .line-chart {
     padding: 17px 22px;
@@ -3022,12 +3026,12 @@ body:has(dialog[open]) {
     font-size: 21px;
   }
   .scale-card p {
-    font-size: 12px;
+    font-size: var(--text-body);
   }
   .mini-checks {
     gap: 8px;
     margin: 15px 0 20px;
-    font-size: 11px;
+    font-size: var(--text-small);
   }
   .benefits {
     padding-top: 76px;
@@ -3049,7 +3053,7 @@ body:has(dialog[open]) {
     font-size: 23px;
   }
   .benefit-copy p {
-    font-size: 12px;
+    font-size: var(--text-body);
   }
 
   .dashboard-wrap {
@@ -3092,7 +3096,7 @@ body:has(dialog[open]) {
   }
   .stats p {
     margin-top: 10px;
-    font-size: 8px;
+    font-size: var(--text-body);
     line-height: 1.7;
   }
   .stats p br {
@@ -3122,16 +3126,16 @@ body:has(dialog[open]) {
     font-size: 31px;
   }
   .journey-copy > p {
-    font-size: 12px;
+    font-size: var(--text-body);
   }
   .eyebrow {
-    font-size: 9px;
+    font-size: var(--text-small);
   }
   .journey-checks {
     grid-template-columns: 1fr 1fr;
     gap: 12px 7px;
     margin: 20px 0;
-    font-size: 9px;
+    font-size: var(--text-small);
   }
   .journey-reverse {
     grid-template-columns: 1fr;
@@ -3142,7 +3146,7 @@ body:has(dialog[open]) {
     font-size: 13px;
   }
   .journey-step p {
-    font-size: 11px;
+    font-size: var(--text-body);
   }
   .journey-step {
     margin-top: 22px;
@@ -3196,7 +3200,7 @@ body:has(dialog[open]) {
   }
   .price-card > p {
     min-height: 0;
-    font-size: 12px;
+    font-size: var(--text-body);
   }
   .price {
     margin-top: 21px;
@@ -3206,32 +3210,32 @@ body:has(dialog[open]) {
   }
   .price > span {
     max-width: none;
-    font-size: 10px;
+    font-size: var(--text-small);
   }
   .billing-detail {
-    font-size: 10px;
+    font-size: var(--text-small);
   }
   .price-card > .button {
     min-height: 44px;
-    font-size: 12px;
+    font-size: var(--text-label);
   }
   .price-card ul {
     gap: 14px;
   }
   .price-card li {
-    font-size: 12px;
+    font-size: var(--text-body);
   }
   .price-card details {
     margin-inline: -27px;
   }
   .price-card summary {
     padding: 18px var(--plan-padding);
-    font-size: 11px;
+    font-size: var(--text-label);
   }
   .popular-label {
     top: 15px;
     right: 23px;
-    font-size: 7px;
+    font-size: var(--text-small);
   }
   .stories-section {
     padding-top: 75px;
@@ -3269,7 +3273,7 @@ body:has(dialog[open]) {
     gap: 6px;
     min-height: 35px;
     padding: 10px 15px;
-    font-size: 10px;
+    font-size: var(--text-label);
   }
   .footer-heading svg {
     width: 12px;
@@ -3289,11 +3293,11 @@ body:has(dialog[open]) {
   }
   .footer-about > p {
     max-width: 350px;
-    font-size: 12px;
+    font-size: var(--text-body);
   }
   .footer-links > a,
   .footer-links > p {
-    font-size: 12px;
+    font-size: var(--text-body);
   }
   .footer-grid h3 {
     font-size: 13px;
@@ -3302,11 +3306,11 @@ body:has(dialog[open]) {
     max-width: none;
   }
   .footer-newsletter > p {
-    font-size: 11px;
+    font-size: var(--text-body);
   }
   .signup-footer input {
     padding: 10px 0;
-    font-size: 12px;
+    font-size: var(--text-input);
   }
   .signup-footer button {
     width: 33px;
@@ -3314,7 +3318,7 @@ body:has(dialog[open]) {
   }
   .footer-bottom {
     gap: 20px;
-    font-size: 8px;
+    font-size: var(--text-small);
     line-height: 1.8;
   }
   .demo-dialog {
@@ -3324,10 +3328,10 @@ body:has(dialog[open]) {
     font-size: 28px;
   }
   .demo-dialog > p {
-    font-size: 13px;
+    font-size: var(--text-body);
   }
   .form-message {
-    font-size: 11px;
+    font-size: var(--text-small);
   }
 }
 @media (max-width: 360px) {
