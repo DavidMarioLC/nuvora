@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
+import { isIndexable, siteDescription, siteTitle, siteUrl } from "../lib/site";
 import "./globals.css";
 
 const geist = localFont({
@@ -10,10 +11,25 @@ const geist = localFont({
 });
 
 export const metadata: Metadata = {
-  description:
-    "Smarter marketing, connected teams, and meaningful growth. Discover Vehtvz, your all-in-one workspace for the next chapter of your business.",
+  alternates: siteUrl ? { canonical: new URL("/", siteUrl) } : undefined,
+  description: siteDescription,
   icons: { icon: "/icon.svg" },
-  title: "Vehtvz — Grow Faster with Expert Marketing Solutions",
+  metadataBase: siteUrl ?? new URL("http://localhost:3000"),
+  openGraph: {
+    description: siteDescription,
+    locale: "en_US",
+    siteName: "Vehtvz Portfolio Demo",
+    title: siteTitle,
+    type: "website",
+    url: siteUrl ? new URL("/", siteUrl) : undefined,
+  },
+  robots: { follow: true, index: isIndexable },
+  title: siteTitle,
+  twitter: {
+    card: "summary_large_image",
+    description: siteDescription,
+    title: siteTitle,
+  },
 };
 
 export default function RootLayout({
